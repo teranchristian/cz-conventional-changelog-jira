@@ -7,6 +7,8 @@ var configLoader = require('commitizen').configLoader;
 var config = configLoader.load() || {};
 var options = {
   types: config.types || conventionalCommitTypes.types,
+  jiraMode: process.env.CZ_JIRA_MODE || config.jiraMode,
+  jiraHost: process.env.CZ_JIRA_HOST || config.jiraHost,
   defaultType: process.env.CZ_TYPE || config.defaultType,
   defaultScope: process.env.CZ_SCOPE || config.defaultScope,
   defaultSubject: process.env.CZ_SUBJECT || config.defaultSubject,
