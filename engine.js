@@ -218,7 +218,7 @@ module.exports = function(options) {
         breaking = breaking ? wrap(breaking, wrapOptions) : false;
 
         var issues = answers.issues
-          ? wrap('close issue @jira-' + answers.issues, wrapOptions)
+          ? wrap('close issue @JIRA-' + answers.issues, wrapOptions)
           : false;
 
         commit(filter([head, body, breaking, issues]).join('\n\n'));
